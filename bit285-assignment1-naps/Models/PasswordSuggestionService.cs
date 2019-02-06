@@ -23,7 +23,7 @@ namespace bit285_assignment1_naps.Models
             {
                 //int num = rand.Next(0, 7);
                 //password += userEntry[rand.Next(0, 6)];
-                password = string.Concat(userEntry[rand.Next(0, 6)]);
+                password = string.Concat(userEntry[rand.Next(0, 5)]);
             }     
             return password;
         }

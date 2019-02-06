@@ -5,32 +5,32 @@
 }
 <h1>New Account Information</h1>
 <fieldset>
-	<form>
+	<form asp-controller="Naps" asp-action="AccountInfo" method="post" >
 		<div>
 			<label asp-for="FirstName" >First Name</label>
-			<input asp-for="FirstName"/>
-			<span>* required</span>
+			<input asp-for="FirstName" />
+			<span asp-validation-for="FirstName">* required</span>
 		</div>
 		<div>
 			<label asp-for="LastName">Last Name</label>
-			<input asp-for="LastName" />
-			<span>* required</span>
+			<input asp-for="LastName"  />
+			<span asp-validation-for="LastName">* required</span>
 		</div>
 		<div>
-			<label asp-for="EmailAdd" >Email Address</label>
-			<input asp-for="EmailAdd"/>
-			<span>* required</span>
+			<label asp-for="EmailAdd">Email Address</label>
+			<input asp-for="EmailAdd"  />
+			<span asp-validation-for="EmailAdd">* required</span>
 		</div>
 		<div>
-			<label>Program</label>
-			<select>
+			<label asp-for="Program">Program</label>
+			<select asp-for="Program">
 				<option>Web App Dev</option>
 				<option>Mobile App Dev</option>
 				<option>Front-end Dev</option>
 			</select>
 		</div>
 		<div>
-			<input type="submit" />
+			<input type="submit" value="Create Password"/>
 			<input type="button" value="Reset" />
 		</div>
 	</form>

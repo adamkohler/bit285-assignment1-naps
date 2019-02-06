@@ -16,6 +16,7 @@ namespace bit285_assignment1_naps
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<bit285_assignment1_naps.Controllers.NapsController>();
+            services.AddTransient<bit285_assignment1_naps.Models.PasswordSuggestionService>();
             services.AddMvc();
         }
 
